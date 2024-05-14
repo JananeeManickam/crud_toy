@@ -1,0 +1,13 @@
+<ul>
+  {% for object in object_list %}
+
+  <li>
+    <a href="/details/{{object.toy_name}}">{{ object.toy_name }}</a> |
+    <a href="/update/{{object.toy_name}}"> Edit </a> |
+    <a href="/delete/{{object.toy_name}}"> Delete </a>
+  </li>
+  <hr />
+  {% empty %}
+  <li>No Objects yet.</li>
+  {% endfor %}
+</ul>
